@@ -8,5 +8,6 @@ use_frameworks!
 target 'CCNetwork' do
   pod 'HandyJSON'
   pod 'Moya'
+  pod 'CCNetwork', :path=>'./'
  
 end
