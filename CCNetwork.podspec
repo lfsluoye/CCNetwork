@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "CCNetwork/CCNetwork/**/*"
+  s.source_files  = "CCNetwork/CCNetwork/**/*.{h,m,swift}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -134,6 +134,7 @@ Pod::Spec.new do |s|
       'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES'
   }
   s.requires_arc = true
+  s.vendored_frameworks = ['CCNetwork/CCNetwork/CCNetwork.framework']
   s.dependency 'Moya', '~> 15.0.0'
   s.dependency 'HandyJSON', '~> 5.0.0'
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
