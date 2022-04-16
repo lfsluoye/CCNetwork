@@ -1,0 +1,111 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CCNetwork
+import Alamofire
+@_exported import CCNetwork
+import Foundation
+import HandyJSON
+import Moya
+import Swift
+public protocol CCRequestType : HandyJSON.HandyJSON {
+  var method: Moya.Method { get }
+  var baseURL: Swift.String { get }
+  var gateway: Swift.String { get }
+  var path: Swift.String { get }
+  var designatedPath: Swift.String { get }
+  var timeOut: Foundation.TimeInterval { get }
+  var headers: [Swift.String : Swift.String]? { get }
+  var extendBodys: [Swift.String : Any] { get }
+  var successCodes: [Swift.Int] { get }
+}
+extension CCRequestType {
+  @discardableResult
+  public static func create(_ request: @escaping (inout Self) -> Swift.Void) -> CCNetwork.CCNetworkSubject
+  public var parameters: [Swift.String : Any]? {
+    get
+  }
+  public var baseURL: Swift.String {
+    get
+  }
+  public var gateway: Swift.String {
+    get
+  }
+  public var designatedPath: Swift.String {
+    get
+  }
+  public var timeOut: Foundation.TimeInterval {
+    get
+  }
+  public var headers: [Swift.String : Swift.String]? {
+    get
+  }
+  public var extendBodys: [Swift.String : Any] {
+    get
+  }
+  public var successCodes: [Swift.Int] {
+    get
+  }
+}
+public protocol CCMultipartFormProtocol {
+  var formData: (() -> (Swift.String, Swift.String, Swift.String, Foundation.Data))? { get set }
+}
+extension CCRequestType where Self : CCNetwork.CCMultipartFormProtocol {
+  @discardableResult
+  public static func create(_ request: @escaping (inout Self) -> Swift.Void, formData: @escaping () -> (Swift.String, Swift.String, Swift.String, Foundation.Data)) -> CCNetwork.CCNetworkSubject
+}
+public protocol CCPageProtocol {
+  static var contentPath: Swift.String { get }
+  static var offsetPath: Swift.String { get }
+  static var sizePath: Swift.String { get }
+  static var totalElementsPath: Swift.String { get }
+  static var hasNextPath: Swift.String { get }
+}
+public enum CCNetwork : Swift.String {
+  case get
+  case post
+  case delete
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class CCConfiguration {
+  public static var baseURL: Swift.String? {
+    get
+    set
+  }
+  public static var gateway: Swift.String
+  public static var headers: () -> [Swift.String : Swift.String]
+  public static var timeOut: Swift.Double
+  public static var globalHandleErrorCodes: [Swift.Int]?
+  public static var errorCodes: [Swift.Int]?
+  public static var successCodes: [Swift.Int]
+  public static var logEnable: Swift.Bool
+  public static var logOutput: ((Swift.String) -> Swift.Void)?
+  public static var designatedPath: Swift.String
+  public static var codePath: Swift.String
+  public static var messagePath: Swift.String
+  public static var globalErrorBlock: ((CCNetwork.CCError) -> ())?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CCNetworkSubject {
+  @objc deinit
+}
+extension CCNetworkSubject {
+  public func onStart(_ start: @escaping () -> Swift.Void) -> Self
+  public func onCompleted(_ completed: @escaping () -> Swift.Void) -> Self
+  public func onProgress(_ percent: @escaping (Swift.Float) -> Swift.Void) -> Self
+  public func onProgress(_ unit: @escaping (Swift.Int64, Swift.Int64) -> Swift.Void) -> Self
+  public func sendRequest(_ path: Swift.String = CCConfiguration.designatedPath, success: @escaping (Swift.Int, Swift.String, Swift.String?) -> Swift.Void, failure: ((CCNetwork.CCError) -> ())? = nil)
+  public func sendRequest<Out>(_ path: Swift.String = CCConfiguration.designatedPath, success: @escaping (Swift.Int, Swift.String, Out?) -> Swift.Void, failure: ((CCNetwork.CCError) -> ())? = nil) where Out : HandyJSON.HandyJSON
+  public func sendRequest<Out>(success: @escaping (Swift.Int, Swift.String, Out?) -> Swift.Void, failure: ((CCNetwork.CCError) -> ())? = nil) where Out : CCNetwork.CCPageProtocol, Out : HandyJSON.HandyJSON
+  public func sendRequest<Out>(_ path: Swift.String = CCConfiguration.designatedPath, success: @escaping (Swift.Int, Swift.String, Out?) -> Swift.Void, failure: ((CCNetwork.CCError) -> ())? = nil) where Out : Swift.Collection, Out.Element : HandyJSON.HandyJSON
+}
+public protocol CCError : Foundation.LocalizedError {
+  var code: Swift.Int { get }
+  var message: Swift.String { get }
+}
+extension CCNetwork.CCNetwork : Swift.Equatable {}
+extension CCNetwork.CCNetwork : Swift.Hashable {}
+extension CCNetwork.CCNetwork : Swift.RawRepresentable {}
