@@ -7,6 +7,39 @@ import Foundation
 import HandyJSON
 import Moya
 import Swift
+public protocol CCError : Foundation.LocalizedError {
+  var code: Swift.Int { get }
+  var message: Swift.String { get }
+}
+public enum CCNetwork : Swift.String {
+  case get
+  case post
+  case delete
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class CCConfiguration {
+  public static var baseURL: Swift.String? {
+    get
+    set
+  }
+  public static var gateway: Swift.String
+  public static var headers: () -> [Swift.String : Swift.String]
+  public static var timeOut: Swift.Double
+  public static var globalHandleErrorCodes: [Swift.Int]?
+  public static var errorCodes: [Swift.Int]?
+  public static var successCodes: [Swift.Int]
+  public static var logEnable: Swift.Bool
+  public static var logOutput: ((Swift.String) -> Swift.Void)?
+  public static var designatedPath: Swift.String
+  public static var codePath: Swift.String
+  public static var messagePath: Swift.String
+  public static var globalErrorBlock: ((CCNetwork.CCError) -> ())?
+  @objc deinit
+}
 public protocol CCRequestType : HandyJSON.HandyJSON {
   var method: Moya.Method { get }
   var baseURL: Swift.String { get }
@@ -53,42 +86,6 @@ extension CCRequestType where Self : CCNetwork.CCMultipartFormProtocol {
   @discardableResult
   public static func create(_ request: @escaping (inout Self) -> Swift.Void, formData: @escaping () -> (Swift.String, Swift.String, Swift.String, Foundation.Data)) -> CCNetwork.CCNetworkSubject
 }
-public protocol CCPageProtocol {
-  static var contentPath: Swift.String { get }
-  static var offsetPath: Swift.String { get }
-  static var sizePath: Swift.String { get }
-  static var totalElementsPath: Swift.String { get }
-  static var hasNextPath: Swift.String { get }
-}
-public enum CCNetwork : Swift.String {
-  case get
-  case post
-  case delete
-  public typealias RawValue = Swift.String
-  public init?(rawValue: Swift.String)
-  public var rawValue: Swift.String {
-    get
-  }
-}
-@_hasMissingDesignatedInitializers public class CCConfiguration {
-  public static var baseURL: Swift.String? {
-    get
-    set
-  }
-  public static var gateway: Swift.String
-  public static var headers: () -> [Swift.String : Swift.String]
-  public static var timeOut: Swift.Double
-  public static var globalHandleErrorCodes: [Swift.Int]?
-  public static var errorCodes: [Swift.Int]?
-  public static var successCodes: [Swift.Int]
-  public static var logEnable: Swift.Bool
-  public static var logOutput: ((Swift.String) -> Swift.Void)?
-  public static var designatedPath: Swift.String
-  public static var codePath: Swift.String
-  public static var messagePath: Swift.String
-  public static var globalErrorBlock: ((CCNetwork.CCError) -> ())?
-  @objc deinit
-}
 @_hasMissingDesignatedInitializers public class CCNetworkSubject {
   @objc deinit
 }
@@ -102,9 +99,12 @@ extension CCNetworkSubject {
   public func sendRequest<Out>(success: @escaping (Swift.Int, Swift.String, Out?) -> Swift.Void, failure: ((CCNetwork.CCError) -> ())? = nil) where Out : CCNetwork.CCPageProtocol, Out : HandyJSON.HandyJSON
   public func sendRequest<Out>(_ path: Swift.String = CCConfiguration.designatedPath, success: @escaping (Swift.Int, Swift.String, Out?) -> Swift.Void, failure: ((CCNetwork.CCError) -> ())? = nil) where Out : Swift.Collection, Out.Element : HandyJSON.HandyJSON
 }
-public protocol CCError : Foundation.LocalizedError {
-  var code: Swift.Int { get }
-  var message: Swift.String { get }
+public protocol CCPageProtocol {
+  static var contentPath: Swift.String { get }
+  static var offsetPath: Swift.String { get }
+  static var sizePath: Swift.String { get }
+  static var totalElementsPath: Swift.String { get }
+  static var hasNextPath: Swift.String { get }
 }
 extension CCNetwork.CCNetwork : Swift.Equatable {}
 extension CCNetwork.CCNetwork : Swift.Hashable {}

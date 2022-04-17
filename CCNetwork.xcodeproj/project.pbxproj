@@ -8,32 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		6350F1FA441E8AA2E2B6163C /* Pods_CCNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D72C03521999802781F8379 /* Pods_CCNetwork.framework */; };
+		E38AE4B9280BE59C0065914B /* CCResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AE4B0280BE59C0065914B /* CCResponseHandler.swift */; };
+		E38AE4BA280BE59C0065914B /* CCConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AE4B1280BE59C0065914B /* CCConfiguration.swift */; };
+		E38AE4BB280BE59C0065914B /* CCPluginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AE4B3280BE59C0065914B /* CCPluginProtocol.swift */; };
+		E38AE4BC280BE59C0065914B /* CCLogPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AE4B4280BE59C0065914B /* CCLogPlugin.swift */; };
+		E38AE4BD280BE59C0065914B /* CCPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AE4B5280BE59C0065914B /* CCPageProtocol.swift */; };
+		E38AE4BE280BE59C0065914B /* CCRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AE4B6280BE59C0065914B /* CCRequestType.swift */; };
+		E38AE4BF280BE59C0065914B /* CCNetworkSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AE4B7280BE59C0065914B /* CCNetworkSubject.swift */; };
+		E38AE4C0280BE59C0065914B /* CCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AE4B8280BE59C0065914B /* CCError.swift */; };
 		E3F1482C280ABD3700D54AEA /* CCNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = E3F1482A280ABD3700D54AEA /* CCNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E3F1485D280AC61100D54AEA /* CCPluginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F14855280AC61100D54AEA /* CCPluginProtocol.swift */; };
-		E3F1485E280AC61100D54AEA /* CCLogPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F14856280AC61100D54AEA /* CCLogPlugin.swift */; };
-		E3F1485F280AC61100D54AEA /* CCResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F14857280AC61100D54AEA /* CCResponseHandler.swift */; };
-		E3F14860280AC61100D54AEA /* CCRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F14858280AC61100D54AEA /* CCRequestType.swift */; };
-		E3F14861280AC61100D54AEA /* CCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F14859280AC61100D54AEA /* CCError.swift */; };
-		E3F14862280AC61100D54AEA /* CCConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F1485A280AC61100D54AEA /* CCConfiguration.swift */; };
-		E3F14863280AC61100D54AEA /* CCNetworkSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F1485B280AC61100D54AEA /* CCNetworkSubject.swift */; };
-		E3F14864280AC61100D54AEA /* CCPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F1485C280AC61100D54AEA /* CCPageProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D72C03521999802781F8379 /* Pods_CCNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3553CCC0B60B491CC58E0F67 /* Pods-CCNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCNetwork.release.xcconfig"; path = "Target Support Files/Pods-CCNetwork/Pods-CCNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		7DE4BBE4AADD2973E8A11F6B /* Pods-CCNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCNetwork.debug.xcconfig"; path = "Target Support Files/Pods-CCNetwork/Pods-CCNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		E38AE4B0280BE59C0065914B /* CCResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCResponseHandler.swift; sourceTree = "<group>"; };
+		E38AE4B1280BE59C0065914B /* CCConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCConfiguration.swift; sourceTree = "<group>"; };
+		E38AE4B3280BE59C0065914B /* CCPluginProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCPluginProtocol.swift; sourceTree = "<group>"; };
+		E38AE4B4280BE59C0065914B /* CCLogPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCLogPlugin.swift; sourceTree = "<group>"; };
+		E38AE4B5280BE59C0065914B /* CCPageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCPageProtocol.swift; sourceTree = "<group>"; };
+		E38AE4B6280BE59C0065914B /* CCRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCRequestType.swift; sourceTree = "<group>"; };
+		E38AE4B7280BE59C0065914B /* CCNetworkSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCNetworkSubject.swift; sourceTree = "<group>"; };
+		E38AE4B8280BE59C0065914B /* CCError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCError.swift; sourceTree = "<group>"; };
 		E3F14827280ABD3700D54AEA /* CCNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CCNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F1482A280ABD3700D54AEA /* CCNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNetwork.h; sourceTree = "<group>"; };
 		E3F1482B280ABD3700D54AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3F14855280AC61100D54AEA /* CCPluginProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCPluginProtocol.swift; sourceTree = "<group>"; };
-		E3F14856280AC61100D54AEA /* CCLogPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCLogPlugin.swift; sourceTree = "<group>"; };
-		E3F14857280AC61100D54AEA /* CCResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCResponseHandler.swift; sourceTree = "<group>"; };
-		E3F14858280AC61100D54AEA /* CCRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCRequestType.swift; sourceTree = "<group>"; };
-		E3F14859280AC61100D54AEA /* CCError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCError.swift; sourceTree = "<group>"; };
-		E3F1485A280AC61100D54AEA /* CCConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCConfiguration.swift; sourceTree = "<group>"; };
-		E3F1485B280AC61100D54AEA /* CCNetworkSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCNetworkSubject.swift; sourceTree = "<group>"; };
-		E3F1485C280AC61100D54AEA /* CCPageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCPageProtocol.swift; sourceTree = "<group>"; };
 		E3F14881280AD1FA00D54AEA /* HandyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HandyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F14882280AD1FA00D54AEA /* Moya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,6 +69,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E38AE4B2280BE59C0065914B /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				E38AE4B3280BE59C0065914B /* CCPluginProtocol.swift */,
+				E38AE4B4280BE59C0065914B /* CCLogPlugin.swift */,
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
 		E3F1481D280ABD3700D54AEA = {
 			isa = PBXGroup;
 			children = (
@@ -100,24 +109,15 @@
 		E3F14853280AC61100D54AEA /* CCNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				E3F14854280AC61100D54AEA /* Plugin */,
-				E3F14857280AC61100D54AEA /* CCResponseHandler.swift */,
-				E3F14858280AC61100D54AEA /* CCRequestType.swift */,
-				E3F14859280AC61100D54AEA /* CCError.swift */,
-				E3F1485A280AC61100D54AEA /* CCConfiguration.swift */,
-				E3F1485B280AC61100D54AEA /* CCNetworkSubject.swift */,
-				E3F1485C280AC61100D54AEA /* CCPageProtocol.swift */,
+				E38AE4B1280BE59C0065914B /* CCConfiguration.swift */,
+				E38AE4B8280BE59C0065914B /* CCError.swift */,
+				E38AE4B7280BE59C0065914B /* CCNetworkSubject.swift */,
+				E38AE4B5280BE59C0065914B /* CCPageProtocol.swift */,
+				E38AE4B6280BE59C0065914B /* CCRequestType.swift */,
+				E38AE4B0280BE59C0065914B /* CCResponseHandler.swift */,
+				E38AE4B2280BE59C0065914B /* Plugin */,
 			);
 			path = CCNetwork;
-			sourceTree = "<group>";
-		};
-		E3F14854280AC61100D54AEA /* Plugin */ = {
-			isa = PBXGroup;
-			children = (
-				E3F14855280AC61100D54AEA /* CCPluginProtocol.swift */,
-				E3F14856280AC61100D54AEA /* CCLogPlugin.swift */,
-			);
-			path = Plugin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +163,7 @@
 				TargetAttributes = {
 					E3F14826280ABD3700D54AEA = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -224,14 +225,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3F1485F280AC61100D54AEA /* CCResponseHandler.swift in Sources */,
-				E3F1485D280AC61100D54AEA /* CCPluginProtocol.swift in Sources */,
-				E3F1485E280AC61100D54AEA /* CCLogPlugin.swift in Sources */,
-				E3F14860280AC61100D54AEA /* CCRequestType.swift in Sources */,
-				E3F14864280AC61100D54AEA /* CCPageProtocol.swift in Sources */,
-				E3F14862280AC61100D54AEA /* CCConfiguration.swift in Sources */,
-				E3F14863280AC61100D54AEA /* CCNetworkSubject.swift in Sources */,
-				E3F14861280AC61100D54AEA /* CCError.swift in Sources */,
+				E38AE4C0280BE59C0065914B /* CCError.swift in Sources */,
+				E38AE4BA280BE59C0065914B /* CCConfiguration.swift in Sources */,
+				E38AE4BB280BE59C0065914B /* CCPluginProtocol.swift in Sources */,
+				E38AE4B9280BE59C0065914B /* CCResponseHandler.swift in Sources */,
+				E38AE4BE280BE59C0065914B /* CCRequestType.swift in Sources */,
+				E38AE4BC280BE59C0065914B /* CCLogPlugin.swift in Sources */,
+				E38AE4BF280BE59C0065914B /* CCNetworkSubject.swift in Sources */,
+				E38AE4BD280BE59C0065914B /* CCPageProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +366,7 @@
 			baseConfigurationReference = 7DE4BBE4AADD2973E8A11F6B /* Pods-CCNetwork.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T58764V53J;
@@ -372,6 +374,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				EXCLUDED_ARCHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CCNetwork/CCNetwork",
+				);
 				INFOPLIST_FILE = CCNetwork/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -385,6 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Caffrey.CCNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -395,6 +402,7 @@
 			baseConfigurationReference = 3553CCC0B60B491CC58E0F67 /* Pods-CCNetwork.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T58764V53J;
@@ -402,7 +410,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				EXCLUDED_ARCHS = "";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CCNetwork/CCNetwork",
+				);
 				INFOPLIST_FILE = CCNetwork/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

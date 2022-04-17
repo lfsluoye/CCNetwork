@@ -1,0 +1,11 @@
+framework module CCNetwork {
+  umbrella header "CCNetwork.h"
+
+  export *
+  module * { export * }
+}
+
+module CCNetwork.Swift {
+    header "CCNetwork-Swift.h"
+    requires objc
+}

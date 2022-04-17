@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CCNetwork"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "CCNetwork."
   s.swift_version = '5.0'
   # This description is used to generate tags and improve search results.
@@ -134,7 +134,7 @@ Pod::Spec.new do |s|
       'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES'
   }
   s.requires_arc = true
-  s.vendored_frameworks = ['CCNetwork/CCNetwork/CCNetwork.framework']
+  s.vendored_frameworks = ['CCNetwork/CCNetwork/CCNetwork.xcframework']
   s.dependency 'Moya', '~> 15.0.0'
   s.dependency 'HandyJSON', '~> 5.0.0'
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }

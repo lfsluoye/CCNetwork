@@ -34,18 +34,18 @@ if [ -d ${swiftmodulePath} ];then
 fi
 
 #如果输出目录存在，即移除该目录，再创建该目录。目的是为了清空输出目录。
-# if [ -d ${OUTPUT_DIR}/${frameworkName}.xcframework ]; then
-# rm -rf ${OUTPUT_DIR}/${frameworkName}.xcframework
-# fi
+if [ -d ${OUTPUT_DIR}/${frameworkName}.xcframework ]; then
+rm -rf ${OUTPUT_DIR}/${frameworkName}.xcframework
+fi
 
 #将打包好的framwork合并成xcframework
-# xcodebuild -create-xcframework \
-# -framework ${devicce_dir} \
-# -framework ${simulator_dir} \
-# -output ${OUTPUT_DIR}/${frameworkName}.xcframework
+xcodebuild -create-xcframework \
+-framework ${devicce_dir} \
+-framework ${simulator_dir} \
+-output ${OUTPUT_DIR}/${frameworkName}.xcframework
 
-lipo -create  "${build}/${configuration}-iphonesimulator/${frameworkName}.framework/${frameworkName}" "${build}/${configuration}-iphoneos/${frameworkName}.framework/${frameworkName}" -output "${build}/${frameworkName}"
-cp -rf ${build}/${frameworkName} ${build}/${frameworkName}.framework/${frameworkName}
+# lipo -create  "${build}/${configuration}-iphonesimulator/${frameworkName}.framework/${frameworkName}" "${build}/${configuration}-iphoneos/${frameworkName}.framework/${frameworkName}" -output "${build}/${frameworkName}"
+# cp -rf ${build}/${frameworkName} ${build}/${frameworkName}.framework/${frameworkName}
 
 rm -rf ${build}/${configuration}-iphonesimulator
 rm -rf ${build}/${configuration}-iphoneos
